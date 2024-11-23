@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dropdown Menu Example</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            :root {
+                --body-color: #f4f4f4;
+
+                --navbar-accent: #002821;
+                --navbar-accent-hover: #005043;
+
+                --dropdown-accent: #fff;
+                --dropdown-accent-hover: #dddd;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins';
+
+                transition: all 0.3s;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                margin: 0;
+                padding: 20px;
+                background-color: var(--body-color);
+                background-image: url(bg.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .navbar {
+                background-color: var(--navbar-accent);
+                overflow: hidden;
+                border-radius: 5px;
+            }
+            .navbar .navbar-title {
+                float: left;
+                margin: 14px 9px;
+                padding: 0 25px;
+                color: var(--dropdown-accent);
+                font-weight: 600;
+                border-right: solid 2px var(--dropdown-accent);
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .navbar a:hover {
+                background-color: var(--navbar-accent-hover);
+            }
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+            .dropdown .dropbtn {
+                cursor: pointer;
+                padding: 14px 16px;
+                background-color: var(--navbar-accent);
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+            }
+            .dropdown:hover .dropbtn {
+                background-color: var(--navbar-accent-hover);
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: var(--dropdown-accent);
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: var(--dropdown-accent-hover);
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .textbox {
+                width: 100%;
+                padding: 20px;
+                background-color: white;
+                border-radius: 5px;
+                margin-top: 50px;
+            }
+            .textbox h1 {
+                text-align: center;
+            }
+            .textbox p {
+                margin-top: 20px;
+                padding: 0 40px;
+                text-align: justify;
+            }
+            .textbox p:last-child{
+                margin-bottom: 20px;
+            }
+            .textbox h2 {
+                margin: 20px 0 -15px 0;
+                padding: 0 40px;
+            }
+            .textbox ul {
+                margin-top: 20px;
+                padding: 0 70px;
+            }
+            .box-wrapper {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 7fr 3fr;
+            }
+            .box-wrapper .textbox {
+                width: 100%;
+            }
+            .box-wrapper .imgbox {
+                width: 100%;
+                margin-top: 50px;
+                display: flex;
+                padding: 20px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .box-wrapper .imgbox img {
+                width: 100%;
+                border-radius: 5px;
+                object-position: center;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <span class="navbar-title">Table Tennis Website</span>
+            <a href="ACTTBSC page-1.html">History</a>
+            <a href="ACTTBSC page-1.html">Rules and Regulations</a>
+            <div class="dropdown">
+                <button class="dropbtn">Equipment &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="ACTTBSC page-1.html">Ball</a>
+                    <a href="ACTTBSC page-1.html">Table</a>
+                    <a href="ACTTBSC page-1.html">Playing Area</a>
+                    <a href="ACTTBSC page-1.html">Racket</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Gameplay &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="#start">Starting a Game</a>
+                    <a href="#service">Service and Return</a>
+                    <a href="#let">Let</a>
+                    <a href="#scoring">Scoring</a>
+                    <a href="#alt">Alternation of Services and Ends</a>
+                    <a href="#expedite">Expedite System</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Grips &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="#penhold">Penhold</a>
+                    <a href="#shakehand">Shakehand</a>
+                    <a href="#seemiller">Seemiller</a>
+                </div>
+            </div>
+            <a href="ACTTBSC page-3.html">Stance</a>
+            <div class="dropdown">
+                <button class="dropbtn">More &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="ACTTBSC page-3.html">Types of Strokes</a>
+                    <a href="ACTTBSC page-3.html">Effects of Spin</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-wrapper">
+            <div class="textbox">
+                <h1>LEARN MORE ABOUT TABLE TENNIS!</h1>
+                <hr>
+                <p>
+                    Table tennis (also known as ping-pong or whiff-whaff) is a racket sport derived from tennis but distinguished by its playing surface being atop a stationary table, rather than the court on which players stand. Either individually or in teams of two, players take alternating turns returning a light, hollow ball over the table's net onto the opposing half of the court using small rackets until they fail to do so, which results in a point for the opponent. Play is fast, requiring quick reaction and constant attention, and is characterized by an emphasis on spin, which can affect the ball's trajectory more than in other ball sports.
+                </p>
+                <p>
+                    Owed to its small minimum playing area, its ability to be played indoors in all climates, and relative accessibility of equipment, table tennis is enjoyed worldwide not just as a competitive sport, but as a common recreational pastime among players of all levels and ages.
+                </p>
+                <p>
+                    Table tennis has been an Olympic sport since 1988, with event categories in both men's and women's singles, and men's and women's teams since replacing doubles in 2008.
+                </p>
+            </div>
+            <div class="imgbox">
+                <img src="about-img.jpg" alt="About Image">
+            </div>
+        </div>
+
+        <div class="textbox">
+            <h1>Gameplay</h1>
+            <hr>
+            <h2 id="start">Starting a Game</h2>
+            <p>
+                According to ITTF rule 2.13.1, the first service is decided by lot, normally a coin toss. It is also common for one player (or the umpire/scorer) to hide the ball in one or the other hand, usually hidden under the table, allowing the other player to guess which hand the ball is in. The correct or incorrect guess gives the "winner" the option to choose to serve, receive, or to choose which side of the table to use. (A common but non-sanctioned method is for the players to play the ball back and forth three times and then play out the point. This is commonly referred to as "serve to play", "rally to serve", "play for serve", or "volley for serve". Another common method is referred to as "Ping for serve" or "Pinging for serve" where players will begin playing by hitting or bouncing the ball and playing a rally spelling out the word ping P-I-N-G with each hit then playing out the point for service).  
+            </p>
+            <h2 id="service">Service and Return</h2>
+            <p>
+                In game play, the player serving the ball commences a play. The server first stands with the ball held on the open palm of the hand not carrying the paddle, called the freehand, and tosses the ball directly upward without spin, at least 16 cm (6.3 in) high. The server strikes the ball with the racket on the ball's descent so that it first touches the server's court, and then touches directly the receiver's court without touching the net assembly. In casual games, many players do not toss the ball upward; however, this is technically illegal and can give the serving player an unfair advantage.
+            </p>
+            <p>
+                The ball must remain behind the endline and above the playing surface of the table at all times during the service. The server's body or clothing cannot be used to obstruct sight of the ball; the opponent and the umpire must have a clear view of the ball at all times. If the umpire is doubtful of the legality of a service they may first interrupt play and give a warning to the server. If the serve is a clear failure or is doubted again by the umpire after the warning, the receiver scores a point.
+            </p>
+            <p>
+                If the service is "good", then the receiver must make a "good" return by hitting the ball back before it bounces a second time on receiver's side of the table so that the ball passes the net and touches the opponent's court, either directly or after touching the net assembly. Thereafter, the server and receiver must alternately make a return until the rally is over. Returning the serve is one of the most difficult parts of the game, as the server's first move is often the least predictable and thus most advantageous shot due to the numerous spin and speed choices at the server's disposal.
+            </p>
+            <h2 id="let">Let</h2>
+            <p>
+                A let is a rally of which the result is not scored, and is called in the following circumstances:
+            </p>
+            <ul>
+                <li>The ball touches the net in service (service), provided the service is otherwise correct or the ball is obstructed by the player on the receiving side. Obstruction means a player touches the ball when it is above or traveling towards the playing surface, not having touched the player's court since last being struck by the player.</li>
+                <li>When the player on the receiving side is not ready and the service is delivered.</li>
+                <li>Player's failure to make a service or a return or to comply with the Laws is due to a disturbance outside the control of the player.</li>
+                <li>Play is interrupted by the umpire or assistant umpire.</li>
+            </ul>
+            <p>
+                A let is also called foul service, if the ball hits the server's side of the table, if the ball does not pass further than the edge, and if the ball hits the table edge and hits the net.
+            </p>
+            <h2 id="scoring">Scoring</h2>
+            <p>
+                A point is scored by the player for any of several results of the rally:
+            </p>
+            <ul>
+                <li>The opponent fails to make a correct service or return.</li>
+                <li>After making a service or a return, the ball touches anything other than the net assembly before being struck by the opponent.</li>
+                <li>The ball passes over the player's court or beyond their end line without touching their court, after being struck by the opponent.</li>
+                <li>The opponent obstructs the ball.</li>
+                <li>The opponent strikes the ball twice successively. The hand that is holding the racket counts as part of the racket and that making a good return off one's hand or fingers is allowed. It is not a fault if the ball accidentally hits one's hand or fingers and then subsequently hits the racket.</li>
+                <li>The opponent strikes the ball with a side of the racket blade whose surface is not covered with rubber.</li>
+                <li>The opponent moves the playing surface or touches the net assembly.</li>
+                <li>The opponent's free hand touches the playing surface.</li>
+                <li>As a receiver under the expedite system, completing 13 returns in a rally.</li>
+                <li>The opponent that has been warned by the umpire commits a second offense in the same individual match or team match. If the third offence happens, 2 points will be given to the player.[47] If the individual match or the team match has not ended, any unused penalty points can be transferred to the next game of that match.</li>
+            </ul>
+            <p>
+                A game shall be won by the player first scoring 11 points unless both players score 10 points, when the game shall be won by the first player subsequently gaining a lead of 2 points. A match shall consist of the best of any odd number of games.[48] In competition play, matches are typically best of five or seven games.
+            </p>
+            <h2 id="alt">Alternation of Services and Ends</h2>
+            <p>
+                Service alternates between opponents every two points (regardless of winner of the rally) until the end of the game, unless both players score ten points or the expedite system is operated, when the sequences of serving and receiving stay the same but each player serves for only one point in turn (Deuce). The player serving first in a game receives first in the next game of the match.
+            </p>
+            <p>
+                After each game, players switch sides of the table. In the last possible game of a match, for example the seventh game in a best of seven match, players change ends when the first player scores five points, regardless of whose turn it is to serve. If the sequence of serving and receiving is out of turn or the ends are not changed, points scored in the wrong situation are still calculated and the game shall be resumed with the order at the score that has been reached.
+            </p>
+            <h2 id="expedite">Expedite System</h2>
+            <p>
+                If a game is unfinished after 10 minutes of play and fewer than 18 points have been scored, the expedite system is initiated. The umpire interrupts the game, and the game resumes with players serving for one point in turn. If the expedite system is introduced while the ball is not in play, the previous receiver shall serve first. Under the expedite system, the server must win the point before the opponent makes 13 consecutive returns or the point goes to the opponent. The system can also be initiated at any time at the request of both players or pairs. Once introduced, the expedite system remains in force until the end of the match. As it is intended as a rule to shorten the duration of a match, it is mainly deployed in defensive players' matches, which tend to have longer points.
+            </p>
+        </div>
+
+        <div class="textbox">
+            <h1>Grips</h1>
+            <hr>
+            <p>
+                Though table tennis players grip their rackets in various ways, their grips can be classified into two major families of styles, penhold and shakehand. The rules of table tennis do not prescribe the manner in which one must grip the racket, and numerous grips are employed.
+            </p>
+            <h2 id="penhold">Penhold</h2>
+            <p>
+                The penhold grip is so-named because one grips the racket similarly to the way one holds a writing instrument. The style of play among penhold players can vary greatly from player to player. The most popular style, usually referred to as the Chinese penhold style, involves curling the middle, ring, and fourth finger on the back of the blade with the three fingers always touching one another. Chinese penholders favour a round racket head, for a more over-the-table style of play. In contrast, another style, sometimes referred to as the Japanese/Korean penhold grip, involves splaying those three fingers out across the back of the racket, usually with all three fingers touching the back of the racket, rather than stacked upon one another. Sometimes a combination of the two styles occurs, wherein the middle, ring and fourth fingers are straight, but still stacked, or where all fingers may be touching the back of the racket, but are also in contact with one another. Japanese and Korean penholders will often use a square-headed racket for an away-from-the-table style of play. Traditionally these square-headed rackets feature a block of cork on top of the handle, as well as a thin layer of cork on the back of the racket, for increased grip and comfort. Penhold styles are popular among players originating from East Asian countries such as China, Japan, South Korea, and Taiwan.
+            </p>
+            <p>
+                Traditionally, penhold players use only one side of the racket to hit the ball during normal play, and the side which is in contact with the last three fingers is generally not used. This configuration is sometimes referred to as "traditional penhold" and is more commonly found in square-headed racket styles. However, the Chinese developed a technique in the 1990s in which a penholder uses both sides of the racket to hit the ball, where the player produces a backhand stroke (most often topspin) known as a reverse penhold backhand by turning the traditional side of the racket to face one's self, and striking the ball with the opposite side of the racket. This stroke has greatly improved and strengthened the penhold style both physically and psychologically, as it eliminates the strategic weakness of the traditional penhold backhand.
+            </p>
+            <h2 id="shakehand">Shakehand</h2>
+            <p>
+                The shakehand grip is so-named because the racket is grasped as if one is performing a handshake. Though it is sometimes referred to as the "tennis" or "Western" grip, it bears no relation to the Western tennis grip, which was popularized on the West Coast of the United States in which the racket is rotated 90°, and played with the wrist turned so that on impact the knuckles face the target. In table tennis, "Western" refers to Western nations, for this is the grip that players native to Europe and the Americas have almost exclusively employed.
+            </p>
+            <p>
+                The shakehand grip's simplicity and versatility, coupled with the acceptance among top-level Chinese trainers that the European style of play should be emulated and trained against, has established it as a common grip even in China. Many world-class European and East Asian players currently use the shakehand grip, and it is generally accepted that shakehands is easier to learn than penholder, allowing a broader range of playing styles both offensive and defensive.
+            </p>
+            <h2 id="seemiller">Seemiller</h2>
+            <p>
+                The Seemiller grip is named after the American table tennis champion Danny Seemiller, who used it. It is achieved by placing the thumb and index finger on either side of the bottom of the racquet head and holding the handle with the rest of the fingers. Since only one side of the racquet is used to hit the ball, two contrasting rubber types can be applied to the blade, offering the advantage of "twiddling" the racket to fool the opponent. Seemiller paired inverted rubber with anti-spin rubber. Many players today combine inverted and long-pipped rubber. The grip is considered exceptional for blocking, especially on the backhand side, and for forehand loops of backspin balls.[56] The Seemiller grip's popularity reached its apex in 1985 when four (Danny Seemiller, Ricky Seemiller, Eric Boggan and Brian Masters) of the United States' five participants in the World Championships used it.
+            </p>
+        </div>
+        
+    </body>
+</html>

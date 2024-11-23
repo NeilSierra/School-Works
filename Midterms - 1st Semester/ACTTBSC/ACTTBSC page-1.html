@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dropdown Menu Example</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            :root {
+                --body-color: #f4f4f4;
+
+                --navbar-accent: #002821;
+                --navbar-accent-hover: #005043;
+
+                --dropdown-accent: #fff;
+                --dropdown-accent-hover: #dddd;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins';
+
+                transition: all 0.3s;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                margin: 0;
+                padding: 20px;
+                background-color: var(--body-color);
+                background-image: url(bg.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .navbar {
+                background-color: var(--navbar-accent);
+                overflow: hidden;
+                border-radius: 5px;
+            }
+            .navbar .navbar-title {
+                float: left;
+                margin: 14px 9px;
+                padding: 0 25px;
+                color: var(--dropdown-accent);
+                font-weight: 600;
+                border-right: solid 2px var(--dropdown-accent);
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .navbar a:hover {
+                background-color: var(--navbar-accent-hover);
+            }
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+            .dropdown .dropbtn {
+                cursor: pointer;
+                padding: 14px 16px;
+                background-color: var(--navbar-accent);
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+            }
+            .dropdown:hover .dropbtn {
+                background-color: var(--navbar-accent-hover);
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: var(--dropdown-accent);
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: var(--dropdown-accent-hover);
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .textbox {
+                width: 100%;
+                padding: 20px;
+                background-color: white;
+                border-radius: 5px;
+                margin-top: 50px;
+            }
+            .textbox h1 {
+                text-align: center;
+            }
+            .textbox p {
+                margin-top: 20px;
+                padding: 0 40px;
+                text-align: justify;
+            }
+            .textbox p:last-child{
+                margin-bottom: 20px;
+            }
+            .textbox h2 {
+                margin: 20px 0 -15px 0;
+                padding: 0 40px;
+            }
+            .box-wrapper {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 7fr 3fr;
+            }
+            .box-wrapper .textbox {
+                width: 100%;
+            }
+            .box-wrapper .imgbox {
+                width: 100%;
+                margin-top: 50px;
+                display: flex;
+                padding: 20px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .box-wrapper .imgbox img {
+                width: 100%;
+                border-radius: 5px;
+                object-position: center;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <span class="navbar-title">Table Tennis Website</span>
+            <a href="#history">History</a>
+            <a href="#rules">Rules and Regulations</a>
+            <div class="dropdown">
+                <button class="dropbtn">Equipment &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="#ball">Ball</a>
+                    <a href="#table">Table</a>
+                    <a href="#playing-area">Playing Area</a>
+                    <a href="#racket">Racket</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Gameplay &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="ACTTBSC page-2.html">Starting a Game</a>
+                    <a href="ACTTBSC page-2.html">Service and Return</a>
+                    <a href="ACTTBSC page-2.html">Let</a>
+                    <a href="ACTTBSC page-2.html">Scoring</a>
+                    <a href="ACTTBSC page-2.html">Alternation of Services and Ends</a>
+                    <a href="ACTTBSC page-2.html">Expedite System</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Grips &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="ACTTBSC page-2.html">Penhold</a>
+                    <a href="ACTTBSC page-2.html">Shakehand</a>
+                    <a href="ACTTBSC page-2.html">Seemiller</a>
+                </div>
+            </div>
+            <a href="ACTTBSC page-3.html">Stance</a>
+            <div class="dropdown">
+                <button class="dropbtn">More &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="ACTTBSC page-3.html">Types of Strokes</a>
+                    <a href="ACTTBSC page-3.html">Effects of Spin</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-wrapper">
+            <div class="textbox">
+                <h1>LEARN MORE ABOUT TABLE TENNIS!</h1>
+                <hr>
+                <p>
+                    Table tennis (also known as ping-pong or whiff-whaff) is a racket sport derived from tennis but distinguished by its playing surface being atop a stationary table, rather than the court on which players stand. Either individually or in teams of two, players take alternating turns returning a light, hollow ball over the table's net onto the opposing half of the court using small rackets until they fail to do so, which results in a point for the opponent. Play is fast, requiring quick reaction and constant attention, and is characterized by an emphasis on spin, which can affect the ball's trajectory more than in other ball sports.
+                </p>
+                <p>
+                    Owed to its small minimum playing area, its ability to be played indoors in all climates, and relative accessibility of equipment, table tennis is enjoyed worldwide not just as a competitive sport, but as a common recreational pastime among players of all levels and ages.
+                </p>
+                <p>
+                    Table tennis has been an Olympic sport since 1988, with event categories in both men's and women's singles, and men's and women's teams since replacing doubles in 2008.
+                </p>
+            </div>
+            <div class="imgbox">
+                <img src="about-img.jpg" alt="About Image">
+            </div>
+        </div>
+
+        <div class="textbox">
+            <h1 id="history">History</h1>
+            <hr>
+            <p>
+                The sport originated in Victorian England, where it was played among the upper-class as an after-dinner parlour game. It has been suggested that makeshift versions of the game were developed by British military officers in India around the 1860s or 1870s, who brought it back with them. A row of books stood up along the center of the table as a net, two more books served as rackets and were used to continuously hit a golf-ball. In 1883, British sporting goods company Slazenger filed a patent for a net for table tennis.
+            </p>
+            <p>
+                The name "ping-pong" was in wide use before British manufacturer J. Jaques & Son Ltd trademarked it in 1901. The name "ping-pong" then came to describe the game played using the rather expensive Jaques's equipment, with other manufacturers calling it table tennis. A similar situation arose in the United States, where Jaques sold the rights to the "ping-pong" name to Parker Brothers. Parker Brothers then enforced its trademark for the term in the 1920s, making the various associations change their names to "table tennis" instead of the more common, but trademarked, term. The U.S. trademark for "Ping-Pong" is currently owned by Indian Industries, Inc. d/b/a Escalade Sports.
+            </p>
+            <p>
+                The next major innovation was by James W. Gibb, a British table tennis enthusiast, who discovered novelty celluloid balls on a trip to the US in 1901 and found them ideal for the game. This was followed by E.C. Goode who, in 1901, invented the modern version of the racket by fixing a sheet of pimpled, or stippled, rubber to the wooden blade. Table tennis was growing in popularity by 1901 to the extent that tournaments were being organized, books were being written on the subject, and an unofficial world championship was held in 1902. In those early days, the scoring system was the same as in lawn tennis.
+            </p>
+            <p>
+                Although both a "Table Tennis Association" and a "Ping Pong Association" existed by 1910, a new Table Tennis Association was founded in 1921, and renamed the English Table Tennis Association in 1926. The International Table Tennis Federation (ITTF) followed in 1926. London hosted the first official World Championships in 1926. In 1933, the United States Table Tennis Association, now called USA Table Tennis, was formed.
+            </p>
+            <p>
+                In the 1930s, Edgar Snow commented in Red Star Over China that the Communist forces in the Chinese Civil War had a "passion for the English game of table tennis" which he found "bizarre". On the other hand, the popularity of the sport waned in the 1930s Soviet Union, partly because of the promotion of team and military sports, and partly because of a theory that the game had adverse health effects.
+            </p>
+            <p>
+                In the 1950s, paddles that used a rubber sheet combined with an underlying sponge layer changed the game dramatically, introducing greater spin and speed. These were introduced to Britain by sports goods manufacturer S.W. Hancock Ltd. The use of speed glue beginning in the mid-1980s increased the spin and speed even further, resulting in changes to the equipment to "slow the game down". Table tennis was introduced as an Olympic sport at the Olympics in 1988.
+            </p>
+        </div>
+
+        <div class="textbox">
+            <h1 id="rules">Rules and Regulations</h1>
+            <hr>
+            <p>
+                The official rules and regulations are specified in the ITTF handbook, which was first published in 1927. The current (fiftieth) version was published in 2022.
+            </p>
+            <h2>Rule Changes</h2>
+            <p>
+                After the 2000 Olympics in Sydney, the ITTF instituted several rule changes that were aimed at making table tennis more viable as a televised spectator sport. First, the older 38 mm (1.50 in) balls were officially replaced by 40 mm (1.57 in) balls in October 2000. This increased the ball's air resistance and effectively slowed down the game. By that time, players had begun increasing the thickness of the fast sponge layer on their paddles, which made the game excessively fast and difficult to watch on television. A few months later, the ITTF changed from a 21-point to an 11-point scoring system (and the serve rotation was reduced from five points to two), effective in September 2001. This was intended to make games more fast-paced and exciting. The ITTF also changed the rules on service to prevent a player from hiding the ball during service, in order to increase the average length of rallies and to reduce the server's advantage, effective in 2002. For the opponent to have time to realize a serve is taking place, the ball must be tossed a minimum of 16 centimetres (6.3 in) in the air. The ITTF states that all events after July 2014 are played with a new poly material ball.
+            </p>
+        </div>
+
+        <div class="textbox">
+            <h1>Equipment</h1>
+            <hr>
+            <h2 id="ball">Ball</h2>
+            <p>
+                The international rules specify that the game is played with a sphere having a mass of 2.7 grams (0.095 oz) and a diameter of 40 millimetres (1.57 in). The rules say that the ball shall bounce up 24–26 cm (9.4–10.2 in) when dropped from a height of 30.5 cm (12.0 in) onto a standard steel block thereby having a coefficient of restitution of 0.89 to 0.92. As of 2015, balls are now made of a polymer instead of celluloid, colored white or orange, with a matte finish. The choice of ball color is made according to the table color and its surroundings. For example, a white ball is easier to see on a green or blue table than it is on a grey table. Manufacturers often indicate the quality of the ball with a star rating system, usually from one to three, three being the highest grade. As this system is not standard across manufacturers, the only way a ball may be used in official competition is upon ITTF approval (the ITTF approval can be seen printed on the ball).
+            </p>
+            <p>
+                The 40 mm ball was introduced after the end of the 2000 Summer Olympics; previously a 38 mm ball was standard. This created some controversies. Vladimir Samsonov, the World No. 1 table tennis professional at the time, threatened to pull out of the World Cup, which was scheduled to debut the new regulation ball on 12 October 2000.
+            </p>
+            <h2 id="table">Table</h2>
+            <p>
+                The table is 2.74 m (9.0 ft) long, 1.525 m (5.0 ft) wide, and 76 cm (2.5 ft) high with any continuous material so long as the table yields a uniform bounce of about 23 cm (9.1 in) when a standard ball is dropped onto it from a height of 30 cm (11.8 in), or about 77%. The table or playing surface is uniformly dark colored and matte, divided into two halves by a net at 15.25 cm (6.0 in) in height. The ITTF approves only wooden tables or their derivates. Concrete tables with a steel net or a solid concrete partition are sometimes available in outside public spaces, such as parks.
+            </p>
+            <h2 id="playing-area">Playing Area</h2>
+            <p>
+                ITTF regulations require a playing space of at least 14 m (45.9 ft) long by 7 m (23.0 ft) wide, and a height clearance of at least 5 m (16.4 ft). For wheelchair events, the minimums are 8 m (26.2 ft) long and 6 m (19.7 ft) wide.
+            </p>
+            <h2 id="racket">Racket</h2>
+            <p>
+                Players are equipped with a laminated wooden racket covered with rubber on one or two sides depending on the grip of the player. The ITTF uses the term "racket", though "bat" is common in Britain, and "paddle" in the U.S. and Canada.
+            </p>
+            <p>
+                The wooden portion of the racket, often referred to as the "blade", commonly features anywhere between one and seven plies of wood, though cork, glass fiber, carbon fiber, aluminum fiber, and Kevlar are sometimes used. According to the ITTF regulations, at least 85% of the blade by thickness shall be of natural wood. Common wood types include balsa, limba, cypress, and hinoki, which is popular in Japan. The average size of the blade is about 17 centimetres (6.7 in) long and 15 centimetres (5.9 in) wide. Although the official restrictions only focus on the flatness and rigidity of the blade itself, these dimensions are optimal for most play styles.
+            </p>
+            <p>
+                Table tennis regulations allow different rubber surfaces on each side of the racket. Various types of surfaces provide various levels of spin or speed, and in some cases they nullify spin. For example, a player may have a rubber that provides much spin on one side of their racket, and one that provides no spin on the other. By flipping the racket in play, different types of returns are possible. To help a player distinguish between the rubber used by his opposing player, international rules specify that one side must be black while the other side must be a bright color clearly distinguishable from black and from the color of the ball. The player has the right to inspect their opponent's racket before a match to see the type of rubber used and what color it is. Despite high-speed play and rapid exchanges, a player can see clearly what side of the racket was used to hit the ball. Current rules state that, unless damaged in play, the racket cannot be exchanged for another racket at any time during a match.
+            </p>
+        </div>
+        
+    </body>
+</html>

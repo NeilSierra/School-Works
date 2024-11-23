@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flower Shop</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+
+                text-decoration: none;
+                font-family: 'Poppins', sans-serif;
+            }
+            body {
+                position: relative;
+                padding: 40px 60px;
+                min-height: 100vh;
+                width: 100vw;
+                overflow: hidden;
+
+                background-color: #E2E1E2;
+                
+                display: grid;
+                grid-template-columns: 6fr 4fr;
+            }
+            .left {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+                z-index: 1;
+
+                background-image: url(images/background-3.webp);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .right {
+                position: relative;
+                z-index: 1;
+
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                background-color: #FAF6F3;
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .right::before {
+                content: '';
+
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+
+                background-image: url(images/background-2.avif);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                opacity: 0.1;
+            }
+            .container {
+                width: 70%;
+                padding: 70px 30px;
+
+                background-color: white;
+                border-radius: 10px;
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+                border-top: 10px solid #706955;
+
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .container h1 {
+                font-size: 30px;
+                line-height: 30px;
+            }
+            .container p {
+                margin: 0 0 10px 0;
+
+            }
+            .container form {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .container form label {
+                margin: 20px 0 0 0;
+            }
+            .container form input {
+                padding: 4px 8px;
+
+                border: none;
+                background-color: #FAF6F3;
+                outline: none;
+
+                font-size: 16px;
+                line-height: 16px;
+            }
+            .container form .buttons-wrapper {
+                margin: 40px 0 0 0;
+
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 10px;
+            }
+            .container form .buttons-wrapper button {
+                padding: 8px;
+                width: 100%;
+                cursor: pointer;
+
+                background-color: #706955;
+                border: #706955 2px solid;
+                border-radius: 5px;
+
+                font-weight: 700;
+                color: white;
+
+                transition: all 0.3s;
+            }
+            .container form .buttons-wrapper button:hover {
+                background-color: white;
+
+                color: #706955;
+            }
+            .container a {
+                margin: 40px 0 0 0;
+
+                text-align: center;
+                color: black;
+            }
+            .container a:hover {
+                text-decoration: underline;
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="left"></section>
+        <section class="right">
+            <div class="container">
+                <h1>Welcome back</h1>
+                <p>Welcome back! Please enter your details</p>
+                <form action="#" method="post">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <div class="buttons-wrapper">
+                        <button type="reset">Clear Entry</button>
+                        <button type="submit">Log In</button>
+                    </div>
+                </form>
+                <a href="ACTFRMC page-1.html">> Go Back</a>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dropdown Menu Example</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            :root {
+                --body-color: #f4f4f4;
+
+                --navbar-accent: #002821;
+                --navbar-accent-hover: #005043;
+
+                --dropdown-accent: #fff;
+                --dropdown-accent-hover: #dddd;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins';
+
+                transition: all 0.3s;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                margin: 0;
+                padding: 20px;
+                background-color: var(--body-color);
+                background-image: url(bg.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .navbar {
+                background-color: var(--navbar-accent);
+                overflow: hidden;
+                border-radius: 5px;
+            }
+            .navbar .navbar-title {
+                float: left;
+                margin: 14px 9px;
+                padding: 0 25px;
+                color: var(--dropdown-accent);
+                font-weight: 600;
+                border-right: solid 2px var(--dropdown-accent);
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .navbar a:hover {
+                background-color: var(--navbar-accent-hover);
+            }
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+            .dropdown .dropbtn {
+                cursor: pointer;
+                padding: 14px 16px;
+                background-color: var(--navbar-accent);
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+            }
+            .dropdown:hover .dropbtn {
+                background-color: var(--navbar-accent-hover);
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: var(--dropdown-accent);
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: var(--dropdown-accent-hover);
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .textbox {
+                width: 100%;
+                padding: 20px;
+                background-color: white;
+                border-radius: 5px;
+                margin-top: 50px;
+            }
+            .textbox h1 {
+                text-align: center;
+            }
+            .textbox p {
+                margin-top: 20px;
+                padding: 0 40px;
+                text-align: justify;
+            }
+            .textbox p:last-child{
+                margin-bottom: 20px;
+            }
+            .textbox h2 {
+                margin: 20px 0 -15px 0;
+                padding: 0 40px;
+            }
+            .textbox ul, .textbox ol {
+                margin-top: 20px;
+                padding: 0 70px;
+            }
+            .box-wrapper {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 7fr 3fr;
+            }
+            .box-wrapper .textbox {
+                width: 100%;
+            }
+            .box-wrapper .imgbox {
+                width: 100%;
+                margin-top: 50px;
+                display: flex;
+                padding: 20px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .box-wrapper .imgbox img {
+                width: 100%;
+                border-radius: 5px;
+                object-position: center;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <span class="navbar-title">Table Tennis Website</span>
+            <a href="ACTTBSC page-1.html">History</a>
+            <a href="ACTTBSC page-1.html">Rules and Regulations</a>
+            <div class="dropdown">
+                <button class="dropbtn">Equipment &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="ACTTBSC page-1.html">Ball</a>
+                    <a href="ACTTBSC page-1.html">Table</a>
+                    <a href="ACTTBSC page-1.html">Playing Area</a>
+                    <a href="ACTTBSC page-1.html">Racket</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Gameplay &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="ACTTBSC page-2.html">Starting a Game</a>
+                    <a href="ACTTBSC page-2.html">Service and Return</a>
+                    <a href="ACTTBSC page-2.html">Let</a>
+                    <a href="ACTTBSC page-2.html">Scoring</a>
+                    <a href="ACTTBSC page-2.html">Alternation of Services and Ends</a>
+                    <a href="ACTTBSC page-2.html">Expedite System</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Grips &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="ACTTBSC page-2.html">Penhold</a>
+                    <a href="ACTTBSC page-2.html">Shakehand</a>
+                    <a href="ACTTBSC page-2.html">Seemiller</a>
+                </div>
+            </div>
+            <a href="#stance">Stance</a>
+            <div class="dropdown">
+                <button class="dropbtn">More &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="#strokes">Types of Strokes</a>
+                    <a href="#spin">Effects of Spin</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-wrapper">
+            <div class="textbox">
+                <h1>LEARN MORE ABOUT TABLE TENNIS!</h1>
+                <hr>
+                <p>
+                    Table tennis (also known as ping-pong or whiff-whaff) is a racket sport derived from tennis but distinguished by its playing surface being atop a stationary table, rather than the court on which players stand. Either individually or in teams of two, players take alternating turns returning a light, hollow ball over the table's net onto the opposing half of the court using small rackets until they fail to do so, which results in a point for the opponent. Play is fast, requiring quick reaction and constant attention, and is characterized by an emphasis on spin, which can affect the ball's trajectory more than in other ball sports.
+                </p>
+                <p>
+                    Owed to its small minimum playing area, its ability to be played indoors in all climates, and relative accessibility of equipment, table tennis is enjoyed worldwide not just as a competitive sport, but as a common recreational pastime among players of all levels and ages.
+                </p>
+                <p>
+                    Table tennis has been an Olympic sport since 1988, with event categories in both men's and women's singles, and men's and women's teams since replacing doubles in 2008.
+                </p>
+            </div>
+            <div class="imgbox">
+                <img src="about-img.jpg" alt="About Image">
+            </div>
+        </div>
+
+        <div class="textbox">
+            <h1 id="stance">Stance</h1>
+            <hr>
+            <p>
+                The stance in table tennis is also known as the 'ready position'. It is the position every player initially adopts when receiving and returns to after playing a shot in order to be prepared to make the next shot. It involves the feet being spaced wider than shoulder width and a partial crouch being adopted; the crouch is an efficient posture for moving quickly from and also preloads the muscles enabling a more dynamic movement. The upper torso is positioned slightly forward and the player is looking forwards. The racket is held at the ready with a bent arm. The position should feel balanced and provide a solid base for striking and quick lateral movement. Players may tailor their stance based upon their personal preferences, and alter it during the game based upon the specific circumstances.
+            </p>
+        </div>
+        
+        <div class="textbox">
+            <h1>More</h1>
+            <hr>
+            <h2 id="strokes">Strokes</h2>
+            <ol>
+               <li>
+                    <p>Offensive strokes</p>
+                    <ul>
+                        <li>Hit</li>
+                        <li>Loop</li>
+                        <li>Counter-hit</li>
+                        <li>Flip</li>
+                        <li>Smash</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Defensive strokes</p>
+                    <ul>
+                        <li>Push</li>
+                        <li>Chop</li>
+                        <li>Block</li>
+                        <li>Lob</li>
+                    </ul>
+                </li>
+            </ol>
+            <h2 id="spin">Effects of Spin</h2>
+            <p>
+                Adding spin onto the ball causes major changes in table tennis gameplay. Although nearly every stroke or serve creates some kind of spin, understanding the individual types of spin allows players to defend against and use different spins effectively.
+            </p>
+            <ul>
+                <li>Backspin</li>
+                <li>Topspin</li>
+                <li>Sidespin</li>
+                <li>Corkspin</li>
+            </ul>
+        </div>
+
+    </body>
+</html>

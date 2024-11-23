@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table Tennis Website</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            :root {
+                --body-color: #f4f4f4;
+
+                --navbar-accent: #002821;
+                --navbar-accent-hover: #005043;
+
+                --dropdown-accent: #fff;
+                --dropdown-accent-hover: #dddd;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins';
+
+                transition: all 0.3s;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                margin: 0;
+                padding: 20px;
+                background-color: var(--body-color);
+                background-image: url(bg.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .navbar {
+                background-color: var(--navbar-accent);
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+                overflow: hidden;
+                border-radius: 5px;
+            }
+            .navbar .navbar-title {
+                float: left;
+                margin: 14px 9px;
+                padding: 0 25px;
+                color: var(--dropdown-accent);
+                font-weight: 600;
+                border-right: solid 2px var(--dropdown-accent);
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .navbar a:hover {
+                background-color: var(--navbar-accent-hover);
+            }
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+            .dropdown .dropbtn {
+                cursor: pointer;
+                padding: 14px 16px;
+                background-color: var(--navbar-accent);
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+            }
+            .dropdown:hover .dropbtn {
+                background-color: var(--navbar-accent-hover);
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: var(--dropdown-accent);
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: var(--dropdown-accent-hover);
+            }
+            .dropdown-content a:hover span {
+                text-decoration: underline;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            .home-content {
+                margin-top: 100px;
+                width: 100%;
+
+                background-color: white;
+                border-radius: 10px;
+
+                display: grid;
+                grid-template-columns: 3fr 7fr;
+            }
+            .home-content .left {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .home-content .left img {
+                height: 100%;
+                width: 100%;
+
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                object-position: center;
+                object-fit: cover;
+            }
+            .home-content .right {
+                padding: 20px;
+
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+
+                text-align: justify;
+            }
+            .history-content {
+                margin-top: 100px;
+                width: 100%;
+                padding: 20px;
+
+                background-color: white;
+                border-radius: 10px;
+            }
+            .history-content h1 {
+                text-align: center;
+            }
+            .history-content .card-holder {
+                margin-top: 30px;
+
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .history-content .card {
+                padding: 10px;
+                margin: 20px;
+
+                background-color: whitesmoke;
+                filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+                border-radius: 10px;
+
+                text-align: center;
+
+                display: grid;
+                grid-template-rows: 60px 1fr;
+                row-gap: 20px;
+            }
+            .history-content .card:hover {
+                transform: scale(1.03);
+            }
+            .history-content .card h1 {
+                height: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <span class="navbar-title">Table Tennis Website</span>
+            <a href="#home">Home</a>
+            <a href="#history">History</a>
+            <a href="#rules">Rules and Regulations</a>
+            <div class="dropdown">
+                <button class="dropbtn">Equipment &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="#ball">> <span>Ball</span></a>
+                    <a href="#table">> <span>Table</span></a>
+                    <a href="#playing-area">> <span>Playing Area</span></a>
+                    <a href="#racket">> <span>Racket</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="home-content" id="home">
+            <div class="left">
+                <img src="home.jpg" alt="Home Image">
+            </div>
+            <div class="right">
+                <h1>LEARN MORE ABOUT TABLE TENNIS!</h1>
+                <p>
+                    <br>
+                    Table tennis (also known as ping-pong or whiff-whaff) is a racket sport derived from tennis but distinguished by its playing surface being atop a stationary table, rather than the court on which players stand. Either individually or in teams of two, players take alternating turns returning a light, hollow ball over the table's net onto the opposing half of the court using small rackets until they fail to do so, which results in a point for the opponent. Play is fast, requiring quick reaction and constant attention, and is characterized by an emphasis on spin, which can affect the ball's trajectory more than in other ball sports.
+                    <br>
+                    <br>
+                    Owed to its small minimum playing area, its ability to be played indoors in all climates, and relative accessibility of equipment, table tennis is enjoyed worldwide not just as a competitive sport, but as a common recreational pastime among players of all levels and ages.
+                    <br>
+                    <br>
+                    Table tennis has been an Olympic sport since 1988, with event categories in both men's and women's singles, and men's and women's teams since replacing doubles in 2008.
+            </div>
+        </div>
+        <div class="history-content" id="history">
+            <h1>HISTORY OF TABLE TENNIS</h1>
+            <div class="card-holder">
+                <div class="card">
+                    <h1>1</h1>
+                    The sport originated in Victorian England, where it was played among the upper-class as an after-dinner parlour game. It has been suggested that makeshift versions of the game were developed by British military officers in India around the 1860s or 1870s, who brought it back with them. A row of books stood up along the center of the table as a net, two more books served as rackets and were used to continuously hit a golf-ball. In 1883, British sporting goods company Slazenger filed a patent for a net for table tennis.
+                </div>
+                <div class="card">
+                    <h1>2</h1>
+                    The name "ping-pong" was in wide use before British manufacturer J. Jaques & Son Ltd trademarked it in 1901. The name "ping-pong" then came to describe the game played using the rather expensive Jaques's equipment, with other manufacturers calling it table tennis. A similar situation arose in the United States, where Jaques sold the rights to the "ping-pong" name to Parker Brothers. Parker Brothers then enforced its trademark for the term in the 1920s, making the various associations change their names to "table tennis" instead of the more common, but trademarked, term. The U.S. trademark for "Ping-Pong" is currently owned by Indian Industries, Inc. d/b/a Escalade Sports.
+                </div>
+                <div class="card">
+                    <h1>3</h1>
+                    The next major innovation was by James W. Gibb, a British table tennis enthusiast, who discovered novelty celluloid balls on a trip to the US in 1901 and found them ideal for the game. This was followed by E.C. Goode who, in 1901, invented the modern version of the racket by fixing a sheet of pimpled, or stippled, rubber to the wooden blade. Table tennis was growing in popularity by 1901 to the extent that tournaments were being organized, books were being written on the subject, and an unofficial world championship was held in 1902. In those early days, the scoring system was the same as in lawn tennis.
+                </div>
+                <div class="card">
+                    <h1>4</h1>
+                    Although both a "Table Tennis Association" and a "Ping Pong Association" existed by 1910, a new Table Tennis Association was founded in 1921, and renamed the English Table Tennis Association in 1926. The International Table Tennis Federation (ITTF) followed in 1926. London hosted the first official World Championships in 1926. In 1933, the United States Table Tennis Association, now called USA Table Tennis, was formed.
+                </div>
+                <div class="card">
+                    <h1>5</h1>
+                    In the 1930s, Edgar Snow commented in Red Star Over China that the Communist forces in the Chinese Civil War had a "passion for the English game of table tennis" which he found "bizarre". On the other hand, the popularity of the sport waned in the 1930s Soviet Union, partly because of the promotion of team and military sports, and partly because of a theory that the game had adverse health effects.
+                </div>
+                <div class="card">
+                    <h1>6</h1>
+                    In the 1950s, paddles that used a rubber sheet combined with an underlying sponge layer changed the game dramatically, introducing greater spin and speed. These were introduced to Britain by sports goods manufacturer S.W. Hancock Ltd. The use of speed glue beginning in the mid-1980s increased the spin and speed even further, resulting in changes to the equipment to "slow the game down". Table tennis was introduced as an Olympic sport at the Olympics in 1988.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

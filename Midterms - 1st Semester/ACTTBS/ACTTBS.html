@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dropdown Menu Example</title>
+        <style>
+            :root {
+                --body-color: #f4f4f4;
+
+                --navbar-accent: #8c0001;
+                --navbar-accent-hover: #460000;
+
+                --dropdown-accent: #fff;
+                --dropdown-accent-hover: #dddd;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background-color: var(--body-color);
+            }
+            .navbar {
+                background-color: var(--navbar-accent);
+                overflow: hidden;
+                border-radius: 5px;
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .navbar a:hover {
+                background-color: var(--navbar-accent-hover);
+            }
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+            .dropdown .dropbtn {
+                cursor: pointer;
+                padding: 14px 16px;
+                background-color: var(--navbar-accent);
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+            }
+            .dropdown:hover .dropbtn {
+                background-color: var(--navbar-accent-hover);
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: var(--dropdown-accent);
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: var(--dropdown-accent-hover);
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <div class="dropdown">
+                <button class="dropbtn">More &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+            <a href="#portfolio">Portfolio</a>
+        </div>
+
+        <h2>This is the Main Page</h2>
+        <p>Webpage with Tabs and dropdown menu.</p>
+    </body>
+</html>

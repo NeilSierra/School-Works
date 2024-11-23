@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Image and Text Gallery</title>
+    <link rel="shortcut icon" href="ACTIMGTXT images/bini.ico" type="image/x-icon"> <!-- Favicon -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      :root { /* Added to define global colors */
+        --bg: white;
+        --bg-item: white;
+        --accent: #EE84AA;
+        --text: #777;
+        --border: #EFC2A1;
+        --bg-item-hover: #F2E9E2;
+      }
+      * {
+        text-decoration: none;                            /* Removes underline in p */
+        font-family: 'Poppins', sans-serif;               /* Sets global font */
+      }
+      body {
+        background-image: url("ACTIMGTXT images/bg.jpg"); /* For background image */
+        background-position: center;                      /* For background image */
+        background-repeat: no-repeat;                     /* For background image */
+        background-size: cover;                           /* For background image */
+        background-attachment: fixed;                     /* For background image */
+        background-color: var(--bg);
+        padding: 150px;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 40px;                              /* Added 20px for more space */
+        font-size: 50px;
+        color: var(--accent);
+        filter: drop-shadow(1px 1px 1px black);         /* Adds shadow */
+      }
+      .gallery {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 40px;                                 /* Added to seperate the two rows */
+      }
+      .gallery-item {
+        background-color: var(--bg-item);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        width: 150px;
+        padding: 50px;
+        text-align: center;
+        transition: all 0.3s;                             /* Adds transition effect */
+
+      }
+      img {
+        width: 100%;
+        aspect-ratio: 1/1;                                /* Changed width to aspect ratio to make the image square */
+        object-fit: cover;                                /* Added object fit cover to maintain the image shape */
+        object-position: top;                             /* Added object posting top to position the image */
+        border-radius: 30px;
+      }
+      h3 {
+        margin-top: 50px;
+        color: var(--accent);
+      }
+      .gallery-item p {
+        color: var(--text);
+        font-size: 18px;
+        text-align: left;
+        margin: 0 -20px;                                    /* Adjust space */
+      }
+      .gallery-item:hover {
+        transform: scale(1.05);
+        background-color: var(--bg-item-hover);             /* Added hover bg */
+        filter: drop-shadow(1px 1px 5px var(--border));     /* Adds hover shadow */
+        b {
+          color: var(--border);                             /* Change hover text color */
+
+
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>BINI Image and Text Gallery</h1>
+    <div class="gallery">
+      <a href="https://en.wikipedia.org/wiki/Gwen_(singer)" class="gallery-item" id="card1">
+        <img src="ACTIMGTXT images/image1.jpg" alt="Gwen Image">
+        <h3>Gwen</h3>
+        <p><b>Gweneth Llaguno Apuli</b> (born June 19, 2003), is a Filipino singer under Star Music. She is one of the <b>lead vocals</b> and <b>lead rappers</b> of the group.</p>
+      </a>
+      <a href="https://en.wikipedia.org/wiki/Aiah_(singer)" class="gallery-item" id="card2">
+        <img src="ACTIMGTXT images/image2.jpg" alt="Aiah Image">
+        <h3>Aiah</h3>
+        <p><b>Maraiah Queen Jaraula Arceta</b> (born January 27, 2001), is a Filipino model, <b>singer</b> and <b>dancer</b> under Star Music. She is one of the main rappers and the oldest member of the group.</p>
+      </a>
+      <a href="https://en.wikipedia.org/wiki/Maloi_(singer)" class="gallery-item" id="card3">
+        <img src="ACTIMGTXT images/image3.jpg" alt="Maloi Image">
+        <h3>Maloi</h3>
+        <p><b>Mary Loi Yves Kipte Ricalde</b> (born May 27, 2002), is a Filipino singer under Star Music. She is one of the <b>main vocalists</b> of the group.</p>
+      </a>
+      <a href="https://en.wikipedia.org/wiki/Sheena_(singer)" class="gallery-item" id="card4">
+        <img src="ACTIMGTXT images/image4.jpg" alt="Sheena Image">
+        <h3>Sheena</h3>
+        <p><b>Sheena Mae Manuel Catacutan</b> (born May 9, 2004), is a Filipino singer and dancer under Star Music. She is the youngest member, <b>main dancer</b>, and one of the <b>sub vocalists</b> of the group.</p>
+      </a>
+    </div>
+    <div class="gallery">
+      <a href="https://en.wikipedia.org/wiki/Colet_(singer)" class="gallery-item" id="card5">
+        <img src="ACTIMGTXT images/image5.jpg" alt="Colet Image">
+        <h3>Colet</h3>
+        <p><b>Maria Nicolette Florenosos Vergara</b> (born September 14, 2001), is a Filipino singer and dancer under Star Magic. She is one of the <b>main vocalists</b>, <b>lead dancers</b>, and <b>lead rappers</b> of the group.</p>
+      </a>
+      <a href="https://en.wikipedia.org/wiki/Stacey_(singer)" class="gallery-item" id="card6">
+        <img src="ACTIMGTXT images/image6.jpg" alt="Stacey Image">
+        <h3>Stacey</h3>
+        <p><b>Lindtsey Stacey Aubrey Sevilleja</b> (born July 13, 2003), is a Filipino singer under Star Music. She is one of the <b>main rappers</b> of the group.</p>
+      </a>
+      <a href="https://en.wikipedia.org/wiki/Mikha_(singer)" class="gallery-item" id="card7">
+        <img src="ACTIMGTXT images/image7.jpg" alt="Mikha Image">
+        <h3>Mikha</h3>
+        <p><b>Mikhaela Janna Jimenea Lim</b> (born November 8, 2003), is a Filipino actress and singer under Star Music. She is one of the <b>main rappers</b> of the group.</p>
+      </a>
+      <a href="https://en.wikipedia.org/wiki/Jhoanna_(singer)" class="gallery-item" id="card8">
+        <img src="ACTIMGTXT images/image8.jpg" alt="Jhoanna Image">
+        <h3>Jhoanna</h3>
+        <p><b>Jhoanna Christine Burgos Robles</b> (born January 26, 2004), is a Filipino actress and singer under Star Music. She is the <b>leader</b> of the group.</p>
+      </a>
+    </div>
+  </body>
+</html>

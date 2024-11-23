@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flower Shop</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+
+                text-decoration: none;
+                font-family: 'Poppins', sans-serif;
+            }
+            body {
+                position: relative;
+                padding: 40px 60px;
+                min-height: 100vh;
+                width: 100vw;
+                overflow: hidden;
+
+                background-color: #E2E1E2;
+                
+                display: grid;
+                grid-template-columns: 6fr 4fr;
+            }
+            .left {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+                z-index: 1;
+
+                background-image: url(images/background-1.avif);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .right {
+                position: relative;
+                z-index: 1;
+
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                background-color: #FAF6F3;
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .right::before {
+                content: '';
+
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+
+                background-image: url(images/background-2.avif);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                opacity: 0.1;
+            }
+            .container {
+                width: 60%;
+                padding: 80px 30px;
+
+                background-color: white;
+                border-radius: 10px;
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+                border-top: 10px solid #706955;
+
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .container h1 {
+                font-size: 30px;
+                line-height: 50px;
+                font-family: 'Pacifico';
+                text-align: center;
+            }
+            .container p {
+                margin: 0 0 10px 0;
+
+                text-align: center;
+            }
+            .container span {
+                margin: 40px 0 0 0;
+
+                font-size: 12px;
+            }
+            .container a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container a button {
+                padding: 8px;
+                width: 100%;
+                cursor: pointer;
+
+                background-color: #706955;
+                border: #706955 2px solid;
+                border-radius: 5px;
+
+                font-weight: 700;
+                color: white;
+
+                transition: all 0.3s;
+            }
+            .container a button:hover {
+                background-color: white;
+
+                color: #706955;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="left"></section>
+        <section class="right">
+            <div class="container">
+                <h1>Neil's Flower Shop</h1>
+                <p>Fresh flowers for any budget.</p>
+                <span>I already have an account.</span>
+                <a href="ACTFRMC page-2.html" title="Log In an Account">
+                    <button>Log In</button>
+                </a>
+                <span>I don't have an account.</span>
+                <a href="ACTFRMC page-3.html" title="Sign Up an Account">
+                    <button>Sign Up</button>
+                </a>
+            </div>   
+        </section>
+    </body>
+</html>
